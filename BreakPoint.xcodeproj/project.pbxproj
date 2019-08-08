@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		259AA754EA8D7BEF15E76252 /* Pods_BreakPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E4338E386083A398CAA0F5 /* Pods_BreakPoint.framework */; };
+		35C4A51222FC42340094803B /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C4A51122FC42340094803B /* DataService.swift */; };
 		35D9A80F22FADEB3006397D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D9A80E22FADEB3006397D9 /* AppDelegate.swift */; };
 		35D9A81122FADEB3006397D9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D9A81022FADEB3006397D9 /* FirstViewController.swift */; };
 		35D9A81322FADEB3006397D9 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D9A81222FADEB3006397D9 /* SecondViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35C4A51122FC42340094803B /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		35D9A80B22FADEB3006397D9 /* BreakPoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakPoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D9A80E22FADEB3006397D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35D9A81022FADEB3006397D9 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 				5113F1B5677475A606EF14D8 /* Pods-BreakPoint.debug.xcconfig */,
 				D1D4C6A71C69CAF011F77B40 /* Pods-BreakPoint.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,6 +124,7 @@
 		35D9A82622FADF97006397D9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				35C4A51122FC42340094803B /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -254,6 +256,7 @@
 				35D9A81322FADEB3006397D9 /* SecondViewController.swift in Sources */,
 				35D9A80F22FADEB3006397D9 /* AppDelegate.swift in Sources */,
 				35D9A81122FADEB3006397D9 /* FirstViewController.swift in Sources */,
+				35C4A51222FC42340094803B /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
