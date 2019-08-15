@@ -19,6 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
+        if Auth.auth().currentUser  == nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main) // just to get the main storyboard
+            let authVC = storyboard.instantiateViewController(withIdentifier: AUTHVC_STORYBOARD_IDEN)
+            window?.makeKeyAndVisible()
+            window?.rootViewController?.present(authVC, animated: true, completion: nil)
+        }
+        
         return true
     }
 
