@@ -13,3 +13,7 @@ import Foundation
 // Storyboard identifiers :
 let AUTHVC_STORYBOARD_IDEN = "AuthVC"
 let LOGINVC_STORYBOARD_IDEN = "LoginVC"
+
+
+// Cells :
+let Feed_CELL = "FeedCell"
