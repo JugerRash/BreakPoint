@@ -40,12 +40,42 @@ class DataService {
         REF_USERS.child(uid).updateChildValues(userData) // with this we create a new user with his data :)
     }
     
+    func getUsername(forUID uid : String , handler : @escaping  (_ userName : String) -> ()) {
+        REF_USERS.observeSingleEvent(of: .value) { (DataSnapshot) in
+            guard let dataSnapshot = DataSnapshot.children.allObjects as? [DataSnapshot] else {
+                return
+            }
+            for user in dataSnapshot {
+                if user.key == uid {
+                    handler(user.childSnapshot(forPath: "email").value as! String)
+                }
+            }
+        }
+    }
+    
     func uploadPost(withMessage message : String ,andUID uid : String , andGroupKey groupKey : String? , uploadComplete : @escaping (_ status : Bool) -> ()){
         if groupKey != nil {
             //send it to a specific group
         }else {
             REF_FEED.childByAutoId().updateChildValues(["content" : message , "senderId" : uid])
             uploadComplete(true)
+        }
+    }
+    
+    func getAllFeedMessages(messageHandler : @escaping (_ messages : [Message]) -> ()){
+        var messageArray = [Message]()
+        REF_FEED.observeSingleEvent(of: .value) { (DataSnapshot) in
+            guard let feedMessageSnapshot = DataSnapshot.children.allObjects as? [DataSnapshot] else {
+                return
+            }
+            for message in feedMessageSnapshot {
+                let content = message.childSnapshot(forPath: "content").value as! String
+                let senderId = message.childSnapshot(forPath: "senderId").value as! String
+                let newMessage = Message(content: content, senderId: senderId)
+                messageArray.append(newMessage)
+            }
+            messageHandler(messageArray)
+            
         }
     }
     

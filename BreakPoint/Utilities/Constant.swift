@@ -16,4 +16,4 @@ let LOGINVC_STORYBOARD_IDEN = "LoginVC"
 
 
 // Cells :
-let Feed_CELL = "FeedCell"
+let Feed_CELL = "feedCell"

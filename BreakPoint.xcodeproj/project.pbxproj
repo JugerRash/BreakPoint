@@ -13,6 +13,8 @@
 		3519EEAC22FD5DFD0092682C /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519EEAB22FD5DFD0092682C /* InsetTextField.swift */; };
 		3519EEAE22FD6A600092682C /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519EEAD22FD6A600092682C /* ShadowView.swift */; };
 		351A6FFB23036875006BA1A9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351A6FFA23036875006BA1A9 /* Constant.swift */; };
+		353189532306A61300C45F31 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353189522306A61300C45F31 /* Message.swift */; };
+		353189552306D75D00C45F31 /* CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353189542306D75C00C45F31 /* CreateGroupsVC.swift */; };
 		354148EC2302D04A0098F780 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354148EB2302D0480098F780 /* AuthService.swift */; };
 		35956E9E23053B3B00A92EE0 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35956E9D23053B3B00A92EE0 /* MeVC.swift */; };
 		35956EA02305475E00A92EE0 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35956E9F2305475E00A92EE0 /* CreatePostVC.swift */; };
@@ -34,6 +36,8 @@
 		3519EEAB22FD5DFD0092682C /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		3519EEAD22FD6A600092682C /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		351A6FFA23036875006BA1A9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		353189522306A61300C45F31 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		353189542306D75C00C45F31 /* CreateGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupsVC.swift; sourceTree = "<group>"; };
 		354148EB2302D0480098F780 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		35956E9D23053B3B00A92EE0 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
 		35956E9F2305475E00A92EE0 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 				3519EEA922FD5D0E0092682C /* LoginVC.swift */,
 				35956E9D23053B3B00A92EE0 /* MeVC.swift */,
 				35956E9F2305475E00A92EE0 /* CreatePostVC.swift */,
+				353189542306D75C00C45F31 /* CreateGroupsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 		35D9A82422FADF45006397D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				353189522306A61300C45F31 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +309,8 @@
 				35956E9E23053B3B00A92EE0 /* MeVC.swift in Sources */,
 				35956EA02305475E00A92EE0 /* CreatePostVC.swift in Sources */,
 				351A6FFB23036875006BA1A9 /* Constant.swift in Sources */,
+				353189552306D75D00C45F31 /* CreateGroupsVC.swift in Sources */,
+				353189532306A61300C45F31 /* Message.swift in Sources */,
 				3519EEAC22FD5DFD0092682C /* InsetTextField.swift in Sources */,
 				35C4A51222FC42340094803B /* DataService.swift in Sources */,
 			);

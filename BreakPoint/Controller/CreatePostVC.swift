@@ -22,6 +22,10 @@ class CreatePostVC: UIViewController {
         textView.delegate = self
         sendBtn.bindToKeyboard()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.userEmailLbl.text = Auth.auth().currentUser?.email
+    }
     //Actions -:
     @IBAction func sendBtnPressed(_ sender: Any) {
         if textView.text != "" && textView.text != "Say something here..." {
