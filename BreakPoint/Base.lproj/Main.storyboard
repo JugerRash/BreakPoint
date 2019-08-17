@@ -336,7 +336,7 @@
                                             <color key="titleColor" red="0.74901960779999999" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="doneBtnPressed:" destination="to4-Pq-Yka" eventType="touchUpInside" id="aSN-H8-Pqq"/>
+                                            <action selector="doneBtnPressed:" destination="to4-Pq-Yka" eventType="touchUpInside" id="Bdp-PF-vJE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMR-x2-O6E">
@@ -393,7 +393,7 @@
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add member to your group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VfZ-Qp-cAK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add member to your group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="VfZ-Qp-cAK">
                                         <rect key="frame" x="0.0" y="158" width="335" height="19"/>
                                         <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                         <color key="textColor" red="0.74901960779999999" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -480,6 +480,7 @@
                     </view>
                     <connections>
                         <outlet property="descTxtField" destination="ldZ-zD-T7h" id="ceB-Tg-3wT"/>
+                        <outlet property="doneBtn" destination="Dls-3E-BA1" id="ddu-BE-Jix"/>
                         <outlet property="memberGroupLbl" destination="VfZ-Qp-cAK" id="Znr-0b-Db8"/>
                         <outlet property="memberTxtField" destination="aif-Sp-r3O" id="fLs-uO-rdN"/>
                         <outlet property="tableView" destination="L1P-sA-qyj" id="6HS-tQ-ElX"/>
