@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateGroupsVC: UIViewController {
 
@@ -32,10 +33,25 @@ class CreateGroupsVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        doneBtn.isEnabled = false
+        doneBtn.isHidden = true
     }
     //Actions -:
     @IBAction func doneBtnPressed(_ sender: Any) {
+        if titleTxtField.text != "" && descTxtField.text != "" {
+            DataService.instance.getIds(forUsernames: chosenUsersEmail) { (returnedIdsArray) in
+                var userIds = returnedIdsArray
+                userIds.append((Auth.auth().currentUser?.uid)!)
+                
+                DataService.instance.createGroup(withTitle: self.titleTxtField.text!, andWithDescription: self.descTxtField.text!, idsArray: userIds, handler: { (success) in
+                    if success {
+                        self.dismiss(animated: true, completion: nil)
+                    }else {
+                        print("Could not create group")
+                    }
+                })
+                
+            }
+        }
     }
     @IBAction func closeBtnPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -79,14 +95,14 @@ extension CreateGroupsVC : UITableViewDelegate , UITableViewDataSource {
         if !chosenUsersEmail.contains(cell.userEmailLbl.text!) {
             chosenUsersEmail.append(cell.userEmailLbl.text!)
             memberGroupLbl.text = chosenUsersEmail.joined(separator: ", ")
-            doneBtn.isEnabled = true
+            doneBtn.isHidden = false
         }else {
             chosenUsersEmail = chosenUsersEmail.filter({ $0 != cell.userEmailLbl.text!})
             if chosenUsersEmail.count >= 1 {
                 memberGroupLbl.text = chosenUsersEmail.joined(separator: ", ")
             }else {
                 memberGroupLbl.text = "add some people to your group"
-                doneBtn.isEnabled = false
+                doneBtn.isHidden = true
             }
         }
     }

@@ -277,14 +277,53 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="arb-SL-m8l">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" rowHeight="100" id="arb-SL-m8l" customClass="GroupCell" customModule="BreakPoint" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="arb-SL-m8l" id="am6-tQ-RwJ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zap-CM-YNd">
+                                                    <rect key="frame" x="8" y="8" width="359" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="20"/>
+                                                    <color key="textColor" red="0.26274509800000001" green="0.34509803919999998" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="19f-AZ-EMk">
+                                                    <rect key="frame" x="15" y="40" width="345" height="41"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpc-mi-gXI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                                            <color key="textColor" red="0.26274509800000001" green="0.34509803919999998" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a85-7s-mhP">
+                                                            <rect key="frame" x="0.0" y="24.5" width="345" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                                            <color key="textColor" red="0.26274509800000001" green="0.34509803919999998" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zap-CM-YNd" firstAttribute="top" secondItem="am6-tQ-RwJ" secondAttribute="top" constant="8" id="OXJ-ns-BtP"/>
+                                                <constraint firstItem="Zap-CM-YNd" firstAttribute="leading" secondItem="am6-tQ-RwJ" secondAttribute="leading" constant="8" id="SiL-jW-NYd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="19f-AZ-EMk" secondAttribute="trailing" id="Xkn-Bs-CJS"/>
+                                                <constraint firstItem="19f-AZ-EMk" firstAttribute="top" secondItem="Zap-CM-YNd" secondAttribute="bottom" constant="8.5" id="fTP-IZ-NZl"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="19f-AZ-EMk" secondAttribute="bottom" constant="8" id="feu-si-o4h"/>
+                                                <constraint firstItem="19f-AZ-EMk" firstAttribute="leading" secondItem="am6-tQ-RwJ" secondAttribute="leadingMargin" id="xkF-u4-YsL"/>
+                                                <constraint firstAttribute="trailing" secondItem="Zap-CM-YNd" secondAttribute="trailing" constant="8" id="ymQ-Hu-1cC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="groupDescrLbl" destination="Fpc-mi-gXI" id="YgY-9M-BmQ"/>
+                                            <outlet property="groupNumMembersLbl" destination="a85-7s-mhP" id="5ua-hu-Uki"/>
+                                            <outlet property="groupTitleLbl" destination="Zap-CM-YNd" id="kPh-Zq-27n"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -304,6 +343,9 @@
                     <tabBarItem key="tabBarItem" title="Groups" image="groups-tabIcon" selectedImage="groups-tabIcon" id="cPa-gy-q4n">
                         <color key="badgeColor" red="0.74901960779999999" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="hKj-yH-e0o" id="5aX-Yv-Yn1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -513,7 +555,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lto-nl-4qP">
-                                        <rect key="frame" x="339" y="35" width="16" height="22"/>
+                                        <rect key="frame" x="336" y="35" width="19" height="22"/>
                                         <state key="normal" image="logoutIcon"/>
                                         <connections>
                                             <action selector="logoutBtnPressed:" destination="B0h-WU-KB1" eventType="touchUpInside" id="TOd-r2-AHy"/>

@@ -18,7 +18,7 @@ let LOGINVC_STORYBOARD_IDEN = "LoginVC"
 // Cells :
 let Feed_CELL = "feedCell"
 let USER_CELL = "userCell"
-
+let GROUP_CELL = "groupCell"
 
 //Images Names :
 let USER_PROFILE_DEFAULT_IMAGE = "defaultProfileImage"

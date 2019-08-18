@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		259AA754EA8D7BEF15E76252 /* Pods_BreakPoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81E4338E386083A398CAA0F5 /* Pods_BreakPoint.framework */; };
+		35058A9023095FEB006358D9 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35058A8F23095FEB006358D9 /* GroupCell.swift */; };
 		3519EEA822FD5C580092682C /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519EEA722FD5C580092682C /* AuthVC.swift */; };
 		3519EEAA22FD5D0E0092682C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519EEA922FD5D0E0092682C /* LoginVC.swift */; };
 		3519EEAC22FD5DFD0092682C /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3519EEAB22FD5DFD0092682C /* InsetTextField.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35058A8F23095FEB006358D9 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		3519EEA722FD5C580092682C /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		3519EEA922FD5D0E0092682C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		3519EEAB22FD5DFD0092682C /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				3519EEAD22FD6A600092682C /* ShadowView.swift */,
 				35956EA323057EA200A92EE0 /* FeedCell.swift */,
 				3594BD362307F34400AE0211 /* UserCell.swift */,
+				35058A8F23095FEB006358D9 /* GroupCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				35D9A80F22FADEB3006397D9 /* AppDelegate.swift in Sources */,
 				3519EEAE22FD6A600092682C /* ShadowView.swift in Sources */,
 				35956EA423057EA200A92EE0 /* FeedCell.swift in Sources */,
+				35058A9023095FEB006358D9 /* GroupCell.swift in Sources */,
 				35D9A81122FADEB3006397D9 /* FeedVC.swift in Sources */,
 				35956E9E23053B3B00A92EE0 /* MeVC.swift in Sources */,
 				35956EA02305475E00A92EE0 /* CreatePostVC.swift in Sources */,
